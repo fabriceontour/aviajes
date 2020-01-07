@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const routes = require('./routes');
 const configs = require('./config/index');
 require('./config/config');
+require('dotenv').config({path: 'variables.env'})
 
 // Express
 const app = express();
@@ -35,6 +36,9 @@ app.use('/', bodyParser.urlencoded({extended: true}));
 //Carge la rutas
 app.use('/', routes());
 
-app.listen(process.env.PORT, process.env.HOST, () => {
-    console.log(`Server arrancado en el port ${process.env.PORT}`)
+const host = process.env.HOST || '0.0.0.0';
+const port = process.env.PORT || 3000;
+
+app.listen(port, host, () => {
+    console.log(`Server arrancado en el port ${port}`)
 });
