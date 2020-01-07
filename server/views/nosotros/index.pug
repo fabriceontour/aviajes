@@ -1,0 +1,27 @@
+extends ../layout/index
+
+block contenido
+    main.container.mt-5
+        .row
+            .col-md-5
+                img(src="img/nosotros.jpg", alt="Imagen de nosotros", class="img-fluid")
+            .col-md-7
+                h1 #{pagina}
+                blockquote Somos una agencia de viaje diferente
+                p Proponemos cosas distintas de las otras
+                p Con nosotros, podreis viajar con tranquilidad y disfrutar de vuestras vacaciones merecidas
+    .listado-iconos
+        .container.mt-5.py-5.text-center
+            .row
+                .col-md-4
+                    img(src="img/icono_seguridad.svg", class="img-fluid mb-4")
+                    h2.mb-4 Seguridad
+                    p Somos por la seguridad
+                .col-md-4
+                    img(src="img/icono_destinos.svg", class="img-fluid mb-4")
+                    h2.mb-4 Mejores Destinos
+                    p Tenemos muy buenos destinos
+                .col-md-4
+                    img(src="img/icono_precios.svg", class="img-fluid mb-4")
+                    h2.mb-4 Precios
+                    p Los precios

@@ -1,0 +1,20 @@
+extends ../layout/index
+
+block contenido
+    main.container.mt-5
+        .row
+            each via in viaje
+                .col-md-5
+                      img(src=`/img/destinos_${via.imagen}_ln.jpg`, class="img-fluid")
+                .col-md-7
+                    h1 #{via.titulo}
+                    p
+                        i.fas.fa-calendar-alt
+                        |  #{via.fecha_ida} - #{via.fecha_vuelta}
+                    p
+                        i.fas.fa-dollar-sign
+                        |  #{via.precio}
+                    p
+                        i.fas.fa-users
+                        |  #{via.disponibles}  Disponibles
+                    p=via.descripcion
