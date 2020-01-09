@@ -17,4 +17,5 @@ block contenido
                     p
                         i.fas.fa-users
                         |  #{via.disponibles}  Disponibles
+                    a(href=`/comprar/${via.id}`, class="btn btn-comprar btn-block") Comprar
                     p=via.descripcion

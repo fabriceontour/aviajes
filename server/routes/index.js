@@ -12,6 +12,8 @@ module.exports = function(){
     router.get('/nosotros', nosotrosController.infoNosotros);
     router.get('/viajes', viajesController.mostrarViajes);
     router.get('/viajes/:id', viajesController.mostrarViaje);
+    router.get('/comprar/:id', viajesController.comprarViaje);
+    router.post('/comprar/:id', viajesController.realizarPago);
     router.get('/testimoniales', testimonialesController.mostrarTestimoniales);
     router.post('/testimoniales', testimonialesController.agregarTestimonial);
 

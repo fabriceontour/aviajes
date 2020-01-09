@@ -1,0 +1,8 @@
+extends ../layout/index
+
+block contenido
+    main.container.mt-5
+        h1.text-center.mb-5 El pagamento se ha efectuado correctamente
+        h5.text-center.mb-5 La referencia es: #{ref}
+        h5.text-center-mb-5 Un correo ha sido enviado a la direcion: #{correo}
+        a(href="/", class="btn btn-comprar btn-block") Continuar

@@ -31,6 +31,17 @@ h3 {
     background-color: rgb(184, 5, 73);
     border-color: rgb(192, 7, 78);
 }
+.btn-comprar {
+    background-color: rgba(15, 233, 15, 0.493);
+    border-color: rgb(14, 112, 19);
+    padding: .8rem 0;
+    text-transform: uppercase;
+    border-radius: .8rem;
+}
+.btn-comprar:hover {
+    background-color: rgb(6, 94, 35);
+    border-color: rgb(2, 32, 11);
+}
 .slider {
     background: url(../img//superior.jpg);
     min-height: 600px;
@@ -165,4 +176,13 @@ i {
     color: #DC135F;
     font-weight: bold;
     margin-top: 1rem;
+}
+.text-tarjeta{
+    width: 200px;
+}
+.text-fechatarjeta{
+    width: 100px;
+}
+.text-cvctarjeta{
+    width: 60px;
 }

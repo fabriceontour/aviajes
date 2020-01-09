@@ -18,9 +18,6 @@ exports.agregarTestimonial = async (req, res) => {
     if(validator.isEmpty(nombre)){
         errores.push({mensaje: 'Agrega tu nombre'});
     }
-    if(!validator.isAlpha(nombre)){
-        errores.push({mensaje: 'El nombre no puede tener numeros'});
-    }
     if(validator.isEmpty(correo)){
         errores.push({mensaje: 'Agrega tu correo'});
     }

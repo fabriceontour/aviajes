@@ -9,7 +9,8 @@
                         i.fas.fa-calendar-alt
                         |  #{viaje.fecha_ida} - #{viaje.fecha_vuelta}
                     p
-                        i.fas.fa-dollar-sign
-                        |  #{viaje.precio}
+                        i.fas.fa-euro-sign
+                        |  #{viaje.precio}  Euros
                     p= viaje.descripcion.substr(0, 100)
                     a(href=`viajes/${viaje.id}`, class="btn btn-success btn-block") Mas Información
+                    a(href=`comprar/${viaje.id}`, class="btn btn-comprar btn-block") Comprar
