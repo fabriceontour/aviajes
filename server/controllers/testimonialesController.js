@@ -1,6 +1,6 @@
+'use strict'
 const Testimonial = require('../models/Testimoniales');
-
-const validator = require('validator');
+const {VerificacionDatos} = require('../classes/verificacionDatos');
 
 exports.mostrarTestimoniales = async (req, res) => {
     const testimoniales = await Testimonial.findAll()
@@ -13,21 +13,7 @@ exports.mostrarTestimoniales = async (req, res) => {
 
 exports.agregarTestimonial = async (req, res) => {
     let {nombre, correo, mensaje} = req.body;
-
-    let errores = [];
-    if(validator.isEmpty(nombre)){
-        errores.push({mensaje: 'Agrega tu nombre'});
-    }
-    if(validator.isEmpty(correo)){
-        errores.push({mensaje: 'Agrega tu correo'});
-    }
-    if(!validator.isEmail(correo)){
-        errores.push({mensaje: 'El correo tiene que ser de formato email'});
-    }
-    if(validator.isEmpty(mensaje)){
-        errores.push({mensaje: 'Agrega tu mensaje'});
-    }
-
+    const errores = VerificacionDatos.verifDatosTestimonial(req.body);
     if(errores.length > 0){
         const testimoniales = await Testimonial.findAll()
         res.render('testimoniales', {
