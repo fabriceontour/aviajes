@@ -8,6 +8,9 @@ block contenido
                         .alert.alert-danger.text-center=error.mensaje
         .row.justify-content-center
                     .col.md-8
+                        p.text-center Es un sitio ejemplo. Entonces, no he puedo la tarjeta de credido.
+                        p.text-center Despues de haber escribido el nombre y el correo, un correo esta enviado automaticamente
+                        p.text-center Y el numero de viajes Disponibles si reduce de uno. Si puede ver en la rubrica Mas Información de un viaje
                         form(action="", method="POST")
                             .form-group
                                 label(for="nombre")  Nombre
@@ -15,11 +18,6 @@ block contenido
                             .form-group
                                 label(for="correo")  Correo Electronico
                                 input(id="correo", type="email", class="form-control", placeholder="Tu correo", name="correo", value=correo)
-                            .form-group
-                                label(for="tarjate" class="mt-2") Tarjeta de Credito o Debito
-                                input(id="tarjeta", type="text", class="form-control text-tarjeta", placeholder="Num tarjeta", name="tarjeta", value=tarjeta)
-                                input(id="fechatarjeta", type="text", class="form-control text-fechatarjeta mt-2", placeholder="MM/AA", name="fechatarjeta", value=fechatarjeta)
-                                input(id="cvctarjeta", type="text", class="form-control text-cvctarjeta mt-2", placeholder="CVC", name="cvctarjeta", value=cvctarjeta)
                                 input(type="submit", value="PAGAR", class="btn btn-success btn-block")
 
         

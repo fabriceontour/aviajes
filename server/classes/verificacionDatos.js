@@ -15,18 +15,6 @@ class VerificacionDatos{
         if(!validator.isEmail(correo)){
             errores.push({mensaje: 'El correo tiene que ser de formato email'});
         }
-        if(validator.isEmpty(tarjeta)){
-          errores.push({mensaje: 'Agrega tu numero tarjeta'});
-        }
-        if(validator.isEmpty(fechatarjeta)){
-          errores.push({mensaje: 'Agrega la fecha de la tarjeta'});
-        }
-        if(validator.isEmpty(cvctarjeta)){
-          errores.push({mensaje: 'Agrega el cvc de la tarjeta'});
-        }
-        if(!validator.isLength(cvctarjeta, [{min: 0, max: 3}])){
-          errores.push({mensaje: 'Numero CVC no correcto'});
-        }
         return errores;
     }
 

@@ -11,6 +11,6 @@
                     p
                         i.fas.fa-euro-sign
                         |  #{viaje.precio}  Euros
-                    p= viaje.descripcion.substr(0, 100)
+                    p= viaje.descripcion.substr(0, 97) + '...'
                     a(href=`viajes/${viaje.id}`, class="btn btn-success btn-block") Mas Información
                     a(href=`comprar/${viaje.id}`, class="btn btn-comprar btn-block") Comprar
